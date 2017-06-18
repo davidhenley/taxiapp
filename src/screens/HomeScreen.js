@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
+import { connect } from 'react-redux';
 
 class HomeScreen extends Component {
   render() {
@@ -19,4 +20,8 @@ const styles = {
   }
 };
 
-export default HomeScreen;
+const mapStateToProps = (state) => {
+  return state;
+};
+
+export default connect(mapStateToProps)(HomeScreen);

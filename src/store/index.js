@@ -8,12 +8,8 @@ const log = createLogger({
   collapsed: true
 });
 
-export default (initialState = {}) => {
-  const store = createStore(
-    reducers,
-    initialState,
-    applyMiddleware(thunk, log)
-  );
-
-  return store;
-};
+export default createStore(
+  reducers,
+  {},
+  applyMiddleware(thunk, log)
+);
