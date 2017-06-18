@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { View, Text } from 'react-native';
 import createStore from './store';
+import Router from './routes';
 
 export default class App extends Component {
   render() {
@@ -10,18 +11,8 @@ export default class App extends Component {
 
     return (
       <Provider store={store}>
-        <View style={styles.container}>
-          <Text>App With Redux</Text>
-        </View>
+        <Router />
       </Provider>
     );
   }
 }
-
-const styles = {
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center"
-  }
-};
